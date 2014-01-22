@@ -85,11 +85,11 @@
 }
 #flickMain .flick_btn_next {
 	padding-right: 15px;
-	background: url(/public/resources/common/images/icon_right.png) no-repeat right center;
+	background: url(/resources/common/images/icon_right.png) no-repeat right center;
 }
 #flickMain .flick_btn_back {
 	padding-left: 15px;
-	background: url(/public/resources/common/images/icon_left.png) no-repeat left center;
+	background: url(/resources/common/images/icon_left.png) no-repeat left center;
 }
 #flickMain .pointer { cursor: pointer !important; }
 #flickMain .btnFalse { background: transparent !important; }

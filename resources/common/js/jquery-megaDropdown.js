@@ -1,5 +1,5 @@
 /**
-* MediaQuery MultiDevice Template ver 0.1É¿
+* MediaQuery MultiDevice Template ver 0.1
 * @Author: funnythingz
 * @Url:    http://hiropo.co.uk
 * 

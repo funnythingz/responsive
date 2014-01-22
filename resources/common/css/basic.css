@@ -223,7 +223,7 @@ p {
 /* link */
 .link {
 	padding-left: 18px;
-	background: url(/public/resources/common/images/dummy_icon.gif) no-repeat 0 0;
+	background: url(/resources/common/images/dummy_icon.gif) no-repeat 0 0;
 }
 
 
@@ -239,7 +239,7 @@ p {
 	margin: 0 0 1em;
 }
 .dotList li {
-	background: url(/public/resources/common/images/icn_dot.gif) no-repeat 0 0.6em;
+	background: url(/resources/common/images/icn_dot.gif) no-repeat 0 0.6em;
 	padding-left: 0.7em;
 	margin-top: 0.5em;
 }
@@ -411,7 +411,7 @@ textarea {
 
 /* background */
 .bgClear {
-	background: url(/public/resources/common/images/bg_clear.png) repeat 0 0;
+	background: url(/resources/common/images/bg_clear.png) repeat 0 0;
 }
 
 /* clearfix */

@@ -36,7 +36,8 @@ ProjectName.ua = {
 	Honeycomb: navigator.userAgent.indexOf('HONEYCOMB')!=-1,
 	GalaxyTab: navigator.userAgent.indexOf('SC-01C')!=-1,
 	iPhone: navigator.userAgent.indexOf('iPhone')!=-1,
-	iPad: navigator.userAgent.indexOf('iPad')!=-1
+	iPad: navigator.userAgent.indexOf('iPad')!=-1,
+	WP7: navigator.userAgent.indexOf('Windows Phone OS 7')!=-1
 }
 
 /**
@@ -46,8 +47,8 @@ ProjectName.META = {
 	iOS: function(){
 		var rtn = '<meta name="apple-mobile-web-app-capable" content="yes">' + "\n"
 				+ '<meta name="format-detection" content="telephone=no">' + "\n"
-				+ '<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">' + "\n"
-				+ '<link rel="apple-touch-icon" href="/public/resources/common/images/icon.png">' + "\n"
+				+ '<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">' + "\n"
+				+ '<link rel="apple-touch-icon" href="/resources/common/images/icon.png">' + "\n"
 		;
 		return rtn;
 	}
@@ -67,5 +68,8 @@ ProjectName.PARTS = {
 			$($.browser.safari ? 'body' : 'html').animate({scrollTop:position}, speed, 'swing');
 			return false;
 		});
+	},
+	hideAdBar: function(){
+		setTimeout("scrollTo(0,1)", 100);
 	}
 }

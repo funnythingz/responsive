@@ -17,7 +17,7 @@
 	zoom: 1;
 }
 .megaDropdownOver ul li {
-	background: url(/public/resources/common/images/bg_clear.png) repeat 0 0;
+	background: url(/resources/common/images/bg_clear.png) repeat 0 0;
 }
 .megaDropdownOver ul,
 .megaDropdownOver ul a {
