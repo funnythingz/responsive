@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/**
+* MediaQuery MultiDevice Template ver 0.1É¿
+* @Author: funnythingz
+* @Url:    http://hiropo.co.uk
+* 
+* jquery-slideEffect.css
+*/
+
+/**============================================================
+* Styles
+*/
+
+.slideEffectWrapper {
+	position: relative;
+}
+.absolute {
+	position: absolute;
+}
+p, ul {
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (max-width: 580px)
+{
+	body {
+		-webkit-text-size-adjust: none;
+	}
+	
+}
+
+/*============================================================
+* Custom
+*/
+#flickMain .flickContainer {
+
+@media only screen and (max-width: 580px)
+{
+
+}

@@ -1,0 +1,55 @@
+<!Doctype html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<title>Demo | jQuery.slideEffect</title>
+
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1">
+
+<link rel="stylesheet" href="jquery-slideEffect.css" media="all" type="text/css">
+
+<script type="text/javascript" src="jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="jquery-slideEffect.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('#demo').slideEffect();
+});
+</script>
+
+</head>
+<body onLoad="ProjectName.PARTS.hideAdBar()" onOrientationChange="ProjectName.PARTS.hideAdBar()">
+
+<div class="section">
+
+	<div id="demo" class="slideEffectWrapper">
+		<p class="absolute" top="0" left="0" effect="fadeIn" wait="1250"><img src="images/main_01_takenoko.png" alt=""></p>
+		<p class="absolute" top="164" left="0" effect="fadeIn" wait="3000"><img src="images/head_01_takenoko.png" alt=""></p>
+		<p class="absolute" top="0" left="0" effect="fadeIn" wait="1250"><img src="images/main_02_yogore.png" alt=""></p>
+		<p class="absolute" top="263" left="0" effect="fadeIn" wait="3000"><img src="images/head_02_yogore.png" alt=""></p>
+		<p class="absolute" top="0" left="0" effect="fadeIn" wait="1250"><img src="images/main_03_ninjin.png" alt=""></p>
+		<p class="absolute" top="146" left="0" effect="fadeIn" wait="3000"><img src="images/head_03_ninjin.png" alt=""></p>
+		<p class="absolute" top="0" left="0" effect="fadeIn"><img src="images/filter_black.png" alt=""></p>
+		<p class="absolute" top="0" left="0" effect="moveTopIn" speed="1250"><a href="#"><img src="images/menu_01_takenoko.png" alt=""></a></p>
+		<p class="absolute" top="0" left="212" effect="moveTopIn" speed="1250"><a href="#"><img src="images/menu_02_yogore.png" alt=""></a></p>
+		<p class="absolute" top="0" left="424" effect="moveTopIn" speed="2000"><a href="#"><img src="images/menu_03_ninjin.png" alt=""></a></p>
+		<!--
+		<ul class="absolute" top="0" left="0" effect="changeImage" speed="1000">
+			<li><img src="images/menu_01_takenoko.png" alt=""></li>
+			<li><img src="images/menu_02_yogore.png" alt=""></li>
+			<li><img src="images/menu_03_ninjin.png" alt=""></li>
+		</ul>
+		-->
+	</div>
+	
+</div><!-- /.section -->
+
+</body>
+</html>

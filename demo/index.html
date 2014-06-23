@@ -1,0 +1,173 @@
+<!Doctype html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<title>Demo Index | funnythingz HTML5 MediaQueries Multi-Device Template.</title>
+
+<meta name="description" content="メディアクエリー(MediaQueries)で実装した、スマフォ対応、HTML5ワンソースマルチデバイステンプレートを公開しています。iPhone、Androidにも対応したフリックJS(jcflick)も公開しています。">
+<meta name="keywords" content="ワンソースマルチデバイス,メディアクエリ,メディアクエリー,mediaquery,MediaQueries,MediaQuery,jcflick,スマフォサイト,フリック,flick,iPhone,Android,HTML5,CSS3">
+
+<link rel="shortcut icon" href="/responsive/resources/images/favicon.ico">
+
+<script type="text/javascript" src="/responsive/resources/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/global.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/jquery-megaDropdown.js"></script>
+<script type="text/javascript">
+(function(){
+	//Viewportの指定
+	if( ProjectName.ua.iPhone || ProjectName.ua.Android || ProjectName.ua.WP7 ){
+		ProjectName.MOD.print_r( ProjectName.META.iOS() );
+
+	}
+})();
+$(function(){
+	if( !ProjectName.ua.iPhone ){
+	if( !ProjectName.ua.iPad ){
+	if( !ProjectName.ua.Android ){
+		$('#globalNavi').megaDropdown();
+	}}}
+	ProjectName.PARTS.scrollAnchor();
+});
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/responsive/resources/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('img');
+</script>
+<![endif]-->
+
+<link rel="stylesheet" href="/responsive/resources/css/import_basic.css" media="all" type="text/css">
+<link rel="stylesheet" href="/responsive/resources/css/import_print.css" media="print" type="text/css">
+<link rel="stylesheet" href="/responsive/resources/css/jquery-megaDropdown.css" media="all" type="text/css">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1882060-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body onLoad="ProjectName.PARTS.hideAdBar()" onOrientationChange="ProjectName.PARTS.hideAdBar()">
+
+<div id="globalContainer"><div id="globalContentsWrapper">
+	<h1 class="level1">Demo Index | MediaQueries Multi-Device Template.</h1>
+	<div id="globalHeader" class="group">
+	<div class="browser fFloL"><img src="/responsive/resources/images/browser.png" alt=""></div>
+	<p class="fFloR sTaC">ver 0.1β<br>2011/10/29</p>
+</div>
+<div id="socialButtons" class="group">
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<!-- はてブ -->
+	<div class="socialbutton">
+	<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+	</div>
+	
+	<!-- twitter -->
+	<div class="socialbutton">
+		<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="funnythingz">Tweet</a>
+	</div>
+	
+	<!-- G+ -->
+	<div class="socialbutton sNone">
+		<div id="googleplus">
+			<div class="g-plusone" data-size="medium" data-count="true"></div>
+		</div>
+	</div>
+	
+	<!-- FB -->
+	<div class="socialbutton sNone">
+		<div id="facebook_icon">
+			<div id="fb-root"></div>
+			<script src="http://connect.facebook.net/ja_JP/all.js#appId=210538342342854&xfbml=1"></script>
+			<script type="text/javascript">
+			(function(){
+				ProjectName.MOD.print_r('<fb:like href="'+ location.href +'" send="false" layout="button_count" width="110" show_faces="false" action="like" font=""></fb:like>');
+			})();
+			</script>
+		</div>
+	</div>
+	
+</div>
+<div id="globalNavi" class="megaDropdown group">
+	<ul class="navigation group gnaviParentCol">
+		<li>
+			<span class="title"><a href="/responsive/"><span class="inner">MediaQueries Home</span></a></span>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/demo/"><span class="inner">MediaQueries Demo</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/demo/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/mediaQueries/archive/v0.1.zip" target="_blank">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/doc/"><span class="inner">MediaQueries Doc</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/doc/module.html">Basic Module</a></li>
+				<li><a href="/responsive/doc/parts.html">Basic Parts</a></li>
+				<li><a href="/responsive/doc/class.html">Class Reference</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/jcflick/"><span class="inner">jQuery.jcflick</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/jcflick/reference.html">Reference</a></li>
+				<li><a href="/responsive/jcflick/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/jcflick/archive/master.zip">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/slideEffect/"><span class="inner">jQuery.slideEffect</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/slideEffect/reference.html">Reference</a></li>
+				<li><a href="/responsive/slideEffect/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/slideEffect/archive/master.zip" target="_blank">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/about.html"><span class="inner">About</span></a></span>
+		</li>
+	</ul>
+</div><!-- /#globalHeader -->
+
+	
+	<div class="section">
+		
+		<h2 class="level2">INDEX</h2>
+		<p><strong>MediaQueries Multi-Device Template</strong> のデモになります。</p>
+		
+		<ul class="indentList">
+			<li class="fsXL"><a href="/responsive/demo/demo.html">＞ Demo Page</a></li>
+			<li class="fsXL"><a href="https://github.com/funnythingz/mediaQueries/archive/v0.1.zip" target="_blank">＞ Download</a></li>
+		</ul>
+		
+	</div><!-- /.section -->
+		
+</div><!-- /#globalContentsWrapper --></div><!-- /#globalContainer -->
+
+
+<div id="globalFooterContainer"><div id="footerInner">
+		<div class="section group">
+		<ul class="footerLink fFloL"><!--
+			--><li class="first-child"><a href="/responsive/">Home</a></li><!--
+			--><li><a href="http://twitter.com/funnythingz">twitter</a></li><!--
+			--><li><a href="http://hiropo.co.uk">wordpress</a></li><!--
+		--></ul>
+		<p class="copyright">Copyright &copy; <a href="http://www.funnythingz.com" target="_blank">funnythingz</a></p>
+	</div>
+</div><!-- /#footerInner --></div><!-- /#globalFooterContainer -->
+
+
+</body>
+</html>

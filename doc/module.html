@@ -1,0 +1,692 @@
+<!Doctype html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<title>Basic Module | funnythingz HTML5 MediaQueries Multi-Device Template.</title>
+
+<meta name="description" content="メディアクエリー(MediaQueries)で実装した、スマフォ対応、HTML5ワンソースマルチデバイステンプレートを公開しています。iPhone、Androidにも対応したフリックJS(jcflick)も公開しています。">
+<meta name="keywords" content="ワンソースマルチデバイス,メディアクエリ,メディアクエリー,mediaquery,MediaQueries,MediaQuery,jcflick,スマフォサイト,フリック,flick,iPhone,Android,HTML5,CSS3">
+
+<link rel="shortcut icon" href="/responsive/resources/images/favicon.ico">
+
+<script type="text/javascript" src="/responsive/resources/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/global.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/jquery-megaDropdown.js"></script>
+<script type="text/javascript">
+(function(){
+	//Viewportの指定
+	if( ProjectName.ua.iPhone || ProjectName.ua.Android || ProjectName.ua.WP7 ){
+		ProjectName.MOD.print_r( ProjectName.META.iOS() );
+
+	}
+})();
+$(function(){
+	if( !ProjectName.ua.iPhone ){
+	if( !ProjectName.ua.iPad ){
+	if( !ProjectName.ua.Android ){
+		$('#globalNavi').megaDropdown();
+	}}}
+	ProjectName.PARTS.scrollAnchor();
+});
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/responsive/resources/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('img');
+</script>
+<![endif]-->
+
+<link rel="stylesheet" href="/responsive/resources/css/import_basic.css" media="all" type="text/css">
+<link rel="stylesheet" href="/responsive/resources/css/import_print.css" media="print" type="text/css">
+
+<link rel="stylesheet" href="/responsive/resources/css/jquery-megaDropdown.css" media="all" type="text/css">
+<!-- Reference Only -->
+<link rel="stylesheet" href="/responsive/resources/etc/google-code-prettify/prettify.css" media="all" type="text/css">
+<script type="text/javascript" src="/responsive/resources/etc/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(function(){ prettyPrint() });
+</script>
+<style type="text/css">
+.prettyprint {
+	overflow: scroll;
+	width: 95%;
+	margin: 0 auto 20px;
+	padding: 10px !important;
+}
+.b {
+	margin: 0 0 1em;
+}
+@media screen and (max-width: 580px) {
+	.b {
+		text-align: center;
+	}
+	.b img {
+		width: 80%;
+	}
+}
+</style>
+<!-- /Reference Only -->
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1882060-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body onLoad="ProjectName.PARTS.hideAdBar()" onOrientationChange="ProjectName.PARTS.hideAdBar()">
+
+<div id="globalContainer"><div id="globalContentsWrapper">
+	<h1 class="level1">Basic Module | MediaQueries Multi-Device Template.</h1>
+	<div id="globalHeader" class="group">
+	<div class="browser fFloL"><img src="/responsive/resources/images/browser.png" alt=""></div>
+	<p class="fFloR sTaC">ver 0.1β<br>2011/10/29</p>
+</div>
+<div id="socialButtons" class="group">
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<!-- はてブ -->
+	<div class="socialbutton">
+	<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+	</div>
+	
+	<!-- twitter -->
+	<div class="socialbutton">
+		<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="funnythingz">Tweet</a>
+	</div>
+	
+	<!-- G+ -->
+	<div class="socialbutton sNone">
+		<div id="googleplus">
+			<div class="g-plusone" data-size="medium" data-count="true"></div>
+		</div>
+	</div>
+	
+	<!-- FB -->
+	<div class="socialbutton sNone">
+		<div id="facebook_icon">
+			<div id="fb-root"></div>
+			<script src="http://connect.facebook.net/ja_JP/all.js#appId=210538342342854&xfbml=1"></script>
+			<script type="text/javascript">
+			(function(){
+				ProjectName.MOD.print_r('<fb:like href="'+ location.href +'" send="false" layout="button_count" width="110" show_faces="false" action="like" font=""></fb:like>');
+			})();
+			</script>
+		</div>
+	</div>
+	
+</div>
+<div id="globalNavi" class="megaDropdown group">
+	<ul class="navigation group gnaviParentCol">
+		<li>
+			<span class="title"><a href="/responsive/"><span class="inner">MediaQueries Home</span></a></span>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/demo/"><span class="inner">MediaQueries Demo</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/demo/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/mediaQueries/archive/v0.1.zip" target="_blank">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/doc/"><span class="inner">MediaQueries Doc</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/doc/module.html">Basic Module</a></li>
+				<li><a href="/responsive/doc/parts.html">Basic Parts</a></li>
+				<li><a href="/responsive/doc/class.html">Class Reference</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/jcflick/"><span class="inner">jQuery.jcflick</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/jcflick/reference.html">Reference</a></li>
+				<li><a href="/responsive/jcflick/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/jcflick/archive/master.zip">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/slideEffect/"><span class="inner">jQuery.slideEffect</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/slideEffect/reference.html">Reference</a></li>
+				<li><a href="/responsive/slideEffect/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/slideEffect/archive/master.zip" target="_blank">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/about.html"><span class="inner">About</span></a></span>
+		</li>
+	</ul>
+</div><!-- /#globalHeader -->
+
+	
+	<h2 class="level2">パンくず</h2>
+	<ul class="breadNavi"><!--
+		--><li><a href="#dummy">HOME</a><span class="arrow">&gt;</span></li><!--
+		--><li><a href="#dummy">ParentPage</a><span class="arrow">&gt;</span></li><!--
+		--><li class="cur"><span>CurrentPage<span></li><!--
+	--></ul>
+<pre class="prettyprint">
+&lt;ul class=&quot;breadNavi&quot;&gt;&lt;!--
+	--&gt;&lt;li&gt;&lt;a href=&quot;#dummy&quot;&gt;HOME&lt;/a&gt;&lt;span class=&quot;arrow&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/li&gt;&lt;!--
+	--&gt;&lt;li&gt;&lt;a href=&quot;#dummy&quot;&gt;ParentPage&lt;/a&gt;&lt;span class=&quot;arrow&quot;&gt;&amp;gt;&lt;/span&gt;&lt;/li&gt;&lt;!--
+	--&gt;&lt;li class=&quot;cur&quot;&gt;&lt;span&gt;CurrentPage&lt;span&gt;&lt;/li&gt;&lt;!--
+--&gt;&lt;/ul&gt;
+</pre>
+	
+	<div class="group">
+	
+		<div class="subContainer">
+			<h2 class="level2">基本モジュール</h2>
+			<ul class="btnList">
+				<li><a href="#anc1">＞見出し</a></li>
+				<li><a href="#anc2">＞段落</a></li>
+				<li><a href="#anc3">＞アイコン</a></li>
+				<li><a href="#anc4">＞リンク</a></li>
+				<li><a href="#anc5">＞リスト</a></li>
+				<li><a href="#anc6">＞罫線</a></li>
+				<li><a href="#anc7">＞表組み</a></li>
+				<li><a href="#anc8">＞フォーム</a></li>
+			</ul>
+			
+		</div><!-- /.subContainer -->
+
+		<div class="mainContainer">
+	
+<div class="section">
+<h2 class="level2" id="anc1">見出し</h2>
+
+<h1 class="level1">見出しレベル1 H1/h1</h1>
+<pre class="prettyprint">
+&lt;h1 class=&quot;level1&quot;&gt;見出しレベル1 H1/h1&lt;/h1&gt;
+</pre>
+
+<h2 class="level2">見出しレベル2 H2/h2</h2>
+<pre class="prettyprint">
+&lt;h2 class=&quot;level2&quot;&gt;見出しレベル2 H2/h2&lt;/h2&gt;
+</pre>
+
+<h3 class="level3">見出しレベル3 H3/h3</h3>
+<pre class="prettyprint">
+&lt;h3 class=&quot;level3&quot;&gt;見出しレベル3 H3/h3&lt;/h3&gt;
+</pre>
+
+<h4 class="level4">見出しレベル4 H4/h4</h4>
+<pre class="prettyprint">
+&lt;h4 class=&quot;level4&quot;&gt;見出しレベル4 H4/h4&lt;/h4&gt;
+</pre>
+
+<h5 class="level5">見出しレベル5 H5/h5</h5>
+<pre class="prettyprint">
+&lt;h5 class=&quot;level5&quot;&gt;見出しレベル5 H5/h5&lt;/h5&gt;
+</pre>
+
+<h6 class="level6">見出しレベル6 H6/h6</h6>
+<pre class="prettyprint">
+&lt;h6 class=&quot;level6&quot;&gt;見出しレベル6 H6/h6&lt;/h6&gt;
+</pre>
+
+
+
+</div><!-- /.section -->
+
+<div class="section">
+<h2 class="level2" id="anc2">段落</h2>
+
+<p>テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト</p>
+<p>テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／</p>
+<pre class="prettyprint">
+&lt;p&gt;テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト&lt;/p&gt;
+&lt;p&gt;テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／&lt;/p&gt;
+</pre>
+
+<p>テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／<br>
+テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／</p>
+<pre class="prettyprint">
+&lt;p&gt;テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／&lt;br&gt;
+テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／&lt;/p&gt;
+</pre>
+
+</div><!-- /.section -->
+
+<div class="section">
+<h2 class="level2" id="anc3">アイコン</h2>
+
+<p><img src="/responsive/resources/images/dummy_icon.gif" alt="iconL" class="iconL">テキストの左側にインラインでアイコンimgを記述する時、imgに付与します。</p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;img src=&quot;/responsive/resources/images/dummy_icon.gif&quot; alt=&quot;iconL&quot; class=&quot;iconL&quot;&gt;テキストの左側にインラインでアイコンimgを記述する時、imgに付与します。&lt;/p&gt;
+</pre>
+
+<p>テキストの右側にインラインでアイコンimgを記述する時、imgに付与します。<img src="/responsive/resources/images/dummy_icon.gif" alt="iconR" class="iconR"></p>
+<pre class="prettyprint">
+&lt;p&gt;テキストの右側にインラインでアイコンimgを記述する時、imgに付与します。&lt;img src=&quot;/responsive/resources/images/dummy_icon.gif&quot; alt=&quot;iconR&quot; class=&quot;iconR&quot;&gt;&lt;/p&gt;
+</pre>
+
+</div><!-- /.section -->
+
+<div class="section">
+<h2 class="level2" id="anc4">リンク</h2>
+
+<p><a href="#" class="link">テキストリンク</a></p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;a href=&quot;#&quot; class=&quot;link&quot;&gt;テキストリンク&lt;/a&gt;&lt;/p&gt;
+</pre>
+
+</div><!-- /.section -->
+
+
+<div class="section">
+<h2 class="level2" id="anc5">リスト</h2>
+
+<h3 class="level3">マークなしリスト</h3>
+<ul class="defList">
+	<li>リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class="defList"&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3 class="level3">インデントリスト</h3>
+<ul class="indentList">
+	<li>※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+	<li>※リストテキスト／リストテキスト／</li>
+	<li>※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class=&quot;indentList&quot;&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3 class="level3">中黒リスト（既存）</h3>
+<ul class="dotList">
+	<li>リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class="dotList"&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3 class="level3">アラビア数字のナンバーリスト（既存）</h3>
+<ol class="numList">
+	<li>リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+</ol>
+<pre class="prettyprint">
+&lt;ol class="numList"&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+<h3 class="level3">注意喚起リスト</h3>
+<ul class="attList">
+	<li>※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+	<li>※リストテキスト／リストテキスト／</li>
+	<li>※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class="attList"&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3 class="level3">注釈リスト</h3>
+<ul class="noteList">
+	<li>※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+	<li>※リストテキスト／リストテキスト／</li>
+	<li>※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class="noteList"&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;※リストテキスト／リストテキスト／リストテキスト／リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+
+<h3 class="level3">横並びリスト</h3>
+<ul class="inlineList">
+	<li>リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+	<li>リストテキスト／</li>
+	<li>リストテキスト／リストテキスト／</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class=&quot;inlineList&quot;&gt;
+	&lt;li&gt;リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／&lt;/li&gt;
+	&lt;li&gt;リストテキスト／リストテキスト／&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3 class="level3">ボタンリスト</h3>
+<ul class="btnList">
+	<li><a href="#">＞ボタンリスト／ボタンリスト／ボタンリスト／</a></li>
+	<li><a href="#">＞ボタンリスト／ボタンリスト／ボタンリスト／</a></li>
+	<li><a href="#">＞ボタンリスト／ボタンリスト／ボタンリスト／</a></li>
+	<li><a href="#">＞ボタンリスト／ボタンリスト／ボタンリスト／</a></li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class=&quot;btnList&quot;&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;＞ボタンリスト／ボタンリスト／ボタンリスト／&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;＞ボタンリスト／ボタンリスト／ボタンリスト／&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;＞ボタンリスト／ボタンリスト／ボタンリスト／&lt;/a&gt;&lt;/li&gt;
+	&lt;li&gt;&lt;a href=&quot;#&quot;&gt;＞ボタンリスト／ボタンリスト／ボタンリスト／&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<h3 class="level3">定義済みリスト</h3>
+<dl class="defDlList">
+	<dt>タイトル</dt>
+	<dd>テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／</dd>
+	<dd>テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／</dd>
+</dl>
+<dl class="defDlList">
+	<dt>タイトル</dt>
+	<dd>テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／</dd>
+</dl>
+<pre class="prettyprint">
+&lt;dl class=&quot;defDlList&quot;&gt;
+	&lt;dt&gt;タイトル&lt;/dt&gt;
+	&lt;dd&gt;テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／&lt;/dd&gt;
+	&lt;dd&gt;テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl class=&quot;defDlList&quot;&gt;
+	&lt;dt&gt;タイトル&lt;/dt&gt;
+	&lt;dd&gt;テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／テキスト／&lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+</div><!-- /.section -->
+
+<div class="section">
+<h2 class="level2" id="anc6">罫線</h2>
+
+<hr class="dotLine">
+<pre class="prettyprint">
+&lt;hr class=&quot;dotLine&quot;&gt;
+</pre>
+
+<hr class="solidLine">
+<pre class="prettyprint">
+&lt;hr class=&quot;solidLine&quot;&gt;
+</pre>
+
+</div><!-- /.section -->
+
+<div class="section">
+<h2 class="level2" id="anc7">表組み</h2>
+
+<table class="defTbl">
+	<tr>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+	<tr>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+</table>
+<pre class="prettyprint">
+&lt;table class=&quot;defTbl&quot;&gt;
+	&lt;tr&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<table class="defTbl">
+	<tr>
+		<th>タイトル</th>
+		<th>タイトル</th>
+	</tr>
+	<tr>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+</table>
+<pre class="prettyprint">
+&lt;table class=&quot;defTbl&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<table class="defTbl">
+	<tr>
+		<th>タイトル</th>
+		<td>内容</td>
+	</tr>
+	<tr>
+		<th>タイトル</th>
+		<td>内容</td>
+	</tr>
+</table>
+<pre class="prettyprint">
+&lt;table class=&quot;defTbl&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<table class="defTbl">
+	<tr>
+		<th>タイトル</th>
+		<th>タイトル</th>
+		<th>タイトル</th>
+	</tr>
+	<tr>
+		<th class="sub">サブタイトル</th>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+	<tr>
+		<th class="sub">サブタイトル</th>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+</table>
+<pre class="prettyprint">
+&lt;table class=&quot;defTbl&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;sub&quot;&gt;サブタイトル&lt;/th&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th class=&quot;sub&quot;&gt;サブタイトル&lt;/th&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+<table class="dlTbl">
+	<tr>
+		<th>タイトル</th>
+		<th class="sub">サブタイトル</th>
+		<td>内容</td>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+	<tr>
+		<th>タイトル</th>
+		<th class="sub">サブタイトル</th>
+		<td>内容</td>
+		<td>内容</td>
+		<td>内容</td>
+	</tr>
+</table>
+<pre class="prettyprint">
+&lt;table class=&quot;dlTbl&quot;&gt;
+	&lt;tr&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;th class="sub"&gt;サブタイトル&lt;/th&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;th&gt;タイトル&lt;/th&gt;
+		&lt;th class="sub"&gt;サブタイトル&lt;/th&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+		&lt;td&gt;内容&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre>
+
+</div><!-- /.section -->
+
+<div class="section">
+<h2 class="level2" id="anc8">フォーム</h2>
+
+<p><label for="text1" class="example">例）テキスト入力</label><input type="text" name="text1" id="text1" value="" class="fPane2"></p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;label for=&quot;text1&quot; class=&quot;example&quot;&gt;例）テキスト入力&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;text1&quot; id=&quot;text1&quot; value=&quot;&quot; class=&quot;sPane2&quot;&gt;&lt;/p&gt;
+</pre>
+
+<p><span class="example">例）Tel Number</span><input type="text" name="text2_1" value="" class="iTelNum"> - <input type="text" name="text2_2" value="" class="iTelNum"> - <input type="text" name="text2_3" value="" class="iTelNum"> - <input type="text" name="text2_4" value="" class="iTelNum"></p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;span class=&quot;example&quot;&gt;例）Tel Number&lt;/span&gt;&lt;input type=&quot;text&quot; name=&quot;text2_1&quot; value=&quot;&quot; class=&quot;iTelNum&quot;&gt; - &lt;input type=&quot;text&quot; name=&quot;text2_2&quot; value=&quot;&quot; class=&quot;iTelNum&quot;&gt; - &lt;input type=&quot;text&quot; name=&quot;text2_3&quot; value=&quot;&quot; class=&quot;iTelNum&quot;&gt; - &lt;input type=&quot;text&quot; name=&quot;text2_4&quot; value=&quot;&quot; class=&quot;iTelNum&quot;&gt;&lt;/p&gt;
+</pre>
+
+<p><span class="example">例）Post Number</span><input type="text" name="text3_1" value="" class="iPosNum1"> - <input type="text" name="text3_2" value="" class="iPosNum2"></p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;span class=&quot;example&quot;&gt;例）Post Number&lt;/span&gt;&lt;input type=&quot;text&quot; name=&quot;text3_1&quot; value=&quot;&quot; class=&quot;iPosNum1&quot;&gt; - &lt;input type=&quot;text&quot; name=&quot;text3_2&quot; value=&quot;&quot; class=&quot;iPosNum2&quot;&gt;&lt;/p&gt;
+</pre>
+
+<p><label for="select1" class="example">例）プルダウンメニュー</label><select name="select1" id="select">
+	<option>選択してください</option>
+	<option>選択肢1</option>
+	<option>選択肢2</option>
+	<option>選択肢3</option>
+</select></p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;label for=&quot;select1&quot; class=&quot;example&quot;&gt;例）プルダウンメニュー&lt;/label&gt;&lt;select name=&quot;select1&quot; id=&quot;select&quot;&gt;
+	&lt;option&gt;選択してください&lt;/option&gt;
+	&lt;option&gt;選択肢1&lt;/option&gt;
+	&lt;option&gt;選択肢2&lt;/option&gt;
+	&lt;option&gt;選択肢3&lt;/option&gt;
+&lt;/select&gt;&lt;/p&gt;
+</pre>
+
+<p><label for="textarea1" class="example">例）複数行テキスト入力</label><textarea name="textarea1" id="textarea1" cols="20" rows="5"></textarea></p>
+<pre class="prettyprint">
+&lt;p&gt;&lt;label for=&quot;textarea1&quot; class=&quot;example&quot;&gt;例）複数行テキスト入力&lt;/label&gt;&lt;textarea name=&quot;textarea1&quot; id=&quot;textarea1&quot; cols=&quot;20&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;&lt;/p&gt;
+</pre>
+
+<ul class="inlineList">
+	<li><input type="radio" name="radio1" id="radio1-1"><label for="radio1-1" class="radioText">ラジオボタン(Y)</li>
+	<li><input type="radio" name="radio1" id="radio1-2"><label for="radio1-2" class="radioText">ラジオボタン(N)</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class=&quot;inlineList&quot;&gt;
+	&lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;radio1&quot; id=&quot;radio1-1&quot;&gt;&lt;label for=&quot;radio1-1&quot; class=&quot;radioText&quot;&gt;ラジオボタン(Y)&lt;/li&gt;
+	&lt;li&gt;&lt;input type=&quot;radio&quot; name=&quot;radio1&quot; id=&quot;radio1-2&quot;&gt;&lt;label for=&quot;radio1-2&quot; class=&quot;radioText&quot;&gt;ラジオボタン(N)&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<ul class="inlineList">
+	<li><input type="checkbox" name="checkbox1" id="checkbox1-1"><label for="checkbox1-1" class="checkboxText">チェックボックス1</li>
+	<li><input type="checkbox" name="checkbox1" id="checkbox1-2"><label for="checkbox1-2" class="checkboxText">チェックボックス2</li>
+	<li><input type="checkbox" name="checkbox1" id="checkbox1-3"><label for="checkbox1-3" class="checkboxText">チェックボックス3</li>
+	<li><input type="checkbox" name="checkbox1" id="checkbox1-4"><label for="checkbox1-4" class="checkboxText">チェックボックス4</li>
+</ul>
+<pre class="prettyprint">
+&lt;ul class=&quot;inlineList&quot;&gt;
+	&lt;li&gt;&lt;input type=&quot;checkbox&quot; name=&quot;checkbox1&quot; id=&quot;checkbox1-1&quot;&gt;&lt;label for=&quot;checkbox1-1&quot; class=&quot;checkboxText&quot;&gt;チェックボックス1&lt;/li&gt;
+	&lt;li&gt;&lt;input type=&quot;checkbox&quot; name=&quot;checkbox1&quot; id=&quot;checkbox1-2&quot;&gt;&lt;label for=&quot;checkbox1-2&quot; class=&quot;checkboxText&quot;&gt;チェックボックス2&lt;/li&gt;
+	&lt;li&gt;&lt;input type=&quot;checkbox&quot; name=&quot;checkbox1&quot; id=&quot;checkbox1-3&quot;&gt;&lt;label for=&quot;checkbox1-3&quot; class=&quot;checkboxText&quot;&gt;チェックボックス3&lt;/li&gt;
+	&lt;li&gt;&lt;input type=&quot;checkbox&quot; name=&quot;checkbox1&quot; id=&quot;checkbox1-4&quot;&gt;&lt;label for=&quot;checkbox1-4&quot; class=&quot;checkboxText&quot;&gt;チェックボックス4&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+</div><!-- /.section -->
+
+		</div><!-- /.mainContainer -->
+	
+	</div><!-- /.group -->
+
+</div><!-- /#globalContentsWrapper -->
+</div><!-- /#globalContainer -->
+
+
+<div id="globalFooterContainer"><div id="footerInner">
+		<div class="section group">
+		<ul class="footerLink fFloL"><!--
+			--><li class="first-child"><a href="/responsive/">Home</a></li><!--
+			--><li><a href="http://twitter.com/funnythingz">twitter</a></li><!--
+			--><li><a href="http://hiropo.co.uk">wordpress</a></li><!--
+		--></ul>
+		<p class="copyright">Copyright &copy; <a href="http://www.funnythingz.com" target="_blank">funnythingz</a></p>
+	</div>
+</div><!-- /#footerInner --></div><!-- /#globalFooterContainer -->
+
+
+</body>
+</html>

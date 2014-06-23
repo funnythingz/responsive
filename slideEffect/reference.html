@@ -1,0 +1,453 @@
+<!Doctype html>
+<html lang="ja">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<title>Reference | jQuery.slideEffect | funnythingz HTML5 MediaQueries Multi-Device Template.</title>
+
+<meta name="description" content="iPhone, Android, iPad, Android3 タブレットなどのスマートフォン端末で、コンテンツをスライドショーのように多彩なエフェクトで切り替えるjQueryプラグインです。">
+<meta name="keywords" content="ワンソースマルチデバイス,メディアクエリ,メディアクエリー,mediaquery,MediaQueries,MediaQuery,slideEffect,スマフォサイト,フリック,flick,iPhone,Android,HTML5,CSS3">
+
+<link rel="shortcut icon" href="/responsive/resources/images/favicon.ico">
+
+<script type="text/javascript" src="/responsive/resources/js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/global.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/jquery-megaDropdown.js"></script>
+<script type="text/javascript" src="/responsive/resources/js/jquery-slideEffect.js"></script>
+<script type="text/javascript">
+(function(){
+	//Viewportの指定
+	if( ProjectName.ua.iPhone || ProjectName.ua.Android || ProjectName.ua.WP7 ){
+		ProjectName.MOD.print_r( ProjectName.META.iOS() );
+
+	}
+})();
+$(function(){
+	if( !ProjectName.ua.iPhone ){
+	if( !ProjectName.ua.iPad ){
+	if( !ProjectName.ua.Android ){
+		$('#globalNavi').megaDropdown();
+	}}}
+	ProjectName.PARTS.scrollAnchor();
+	$('#demo').slideEffect();
+});
+</script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/responsive/resources/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+	DD_belatedPNG.fix('img');
+</script>
+<![endif]-->
+
+<link rel="stylesheet" href="/responsive/resources/css/import_basic.css" media="all" type="text/css">
+<link rel="stylesheet" href="/responsive/resources/css/import_print.css" media="print" type="text/css">
+
+<link rel="stylesheet" href="/responsive/resources/css/jquery-megaDropdown.css" media="all" type="text/css">
+<link rel="stylesheet" href="/responsive/resources/css/jquery-slideEffect.css" media="all" type="text/css">
+
+<!-- Reference Only -->
+<link rel="stylesheet" href="/responsive/resources/etc/google-code-prettify/prettify.css" media="all" type="text/css">
+<script type="text/javascript" src="/responsive/resources/etc/google-code-prettify/prettify.js"></script>
+<script type="text/javascript">
+$(function(){ prettyPrint() });
+</script>
+<style type="text/css">
+.prettyprint {
+	overflow: scroll;
+	width: 95%;
+	margin: 0 auto 20px;
+	padding: 10px !important;
+}
+.sampleDemo {
+	margin: 0 0 20px;
+}
+</style>
+<!-- /Reference Only -->
+
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1882060-11']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<div id="globalContainer"><div id="globalContentsWrapper">
+
+	<h1 class="level1">Reference | jQuery.slideEffect</h1>
+	<div id="globalHeader" class="group">
+		<div class="browser fFloL"><img src="/responsive/resources/images/browser.png" alt=""></div>
+		<p class="fFloR sTaC">ver 0.0.1<br>Last Update 2011/09/26</p>
+	</div>
+	<div class="section">
+		<div id="socialButtons" class="group">
+	<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+	<!-- はてブ -->
+	<div class="socialbutton">
+	<a href="http://b.hatena.ne.jp/entry/" class="hatena-bookmark-button" data-hatena-bookmark-layout="standard" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only.gif" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a><script type="text/javascript" src="http://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
+	</div>
+	
+	<!-- twitter -->
+	<div class="socialbutton">
+		<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="funnythingz">Tweet</a>
+	</div>
+	
+	<!-- G+ -->
+	<div class="socialbutton sNone">
+		<div id="googleplus">
+			<div class="g-plusone" data-size="medium" data-count="true"></div>
+		</div>
+	</div>
+	
+	<!-- FB -->
+	<div class="socialbutton sNone">
+		<div id="facebook_icon">
+			<div id="fb-root"></div>
+			<script src="http://connect.facebook.net/ja_JP/all.js#appId=210538342342854&xfbml=1"></script>
+			<script type="text/javascript">
+			(function(){
+				ProjectName.MOD.print_r('<fb:like href="'+ location.href +'" send="false" layout="button_count" width="110" show_faces="false" action="like" font=""></fb:like>');
+			})();
+			</script>
+		</div>
+	</div>
+	
+</div>
+		<div id="globalNavi" class="megaDropdown group">
+	<ul class="navigation group gnaviParentCol">
+		<li>
+			<span class="title"><a href="/responsive/"><span class="inner">MediaQueries Home</span></a></span>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/demo/"><span class="inner">MediaQueries Demo</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/demo/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/mediaQueries/archive/v0.1.zip" target="_blank">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/doc/"><span class="inner">MediaQueries Doc</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/doc/module.html">Basic Module</a></li>
+				<li><a href="/responsive/doc/parts.html">Basic Parts</a></li>
+				<li><a href="/responsive/doc/class.html">Class Reference</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/jcflick/"><span class="inner">jQuery.jcflick</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/jcflick/reference.html">Reference</a></li>
+				<li><a href="/responsive/jcflick/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/jcflick/archive/master.zip">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/slideEffect/"><span class="inner">jQuery.slideEffect</span></a></span>
+			<ul class="gnaviChildCol">
+				<li><a href="/responsive/slideEffect/reference.html">Reference</a></li>
+				<li><a href="/responsive/slideEffect/demo.html">Demo Page</a></li>
+				<li><a href="https://github.com/funnythingz/slideEffect/archive/master.zip" target="_blank">Download</a></li>
+			</ul>
+		</li>
+		<li>
+			<span class="title"><a href="/responsive/about.html"><span class="inner">About</span></a></span>
+		</li>
+	</ul>
+</div><!-- /#globalHeader -->
+
+	</div>
+	
+	<h2 class="level2">仕様</h2>
+	<p class="mb10">
+		jQueryのプラグインとして開発してあります。<br>
+		基本的にブロック要素でマークアップした順にコンテンツがスライドショーのようにエフェクト演出で表示されます。
+	</p>
+	
+	<div class="section">
+	
+		<div id="demo" class="slideEffectWrapper">
+			<p class="absolute" top="0" left="0" effect="fadeIn" wait="1250"><img src="images/main_01_takenoko.png" alt=""></p>
+			<p class="absolute" top="164" left="0" effect="fadeIn" wait="3000"><img src="images/head_01_takenoko.png" alt=""></p>
+			<p class="absolute" top="0" left="0" effect="fadeIn" wait="1250"><img src="images/main_02_yogore.png" alt=""></p>
+			<p class="absolute" top="263" left="0" effect="fadeIn" wait="3000"><img src="images/head_02_yogore.png" alt=""></p>
+			<p class="absolute" top="0" left="0" effect="fadeIn" wait="1250"><img src="images/main_03_ninjin.png" alt=""></p>
+			<p class="absolute" top="146" left="0" effect="fadeIn" wait="3000"><img src="images/head_03_ninjin.png" alt=""></p>
+			<p class="absolute" top="0" left="0" effect="fadeIn"><img src="images/filter_black.png" alt=""></p>
+			<p class="absolute" top="0" left="0" effect="moveTopIn" speed="1250"><a href="#"><img src="images/menu_01_takenoko.png" alt=""></a></p>
+			<p class="absolute" top="0" left="212" effect="moveTopIn" speed="1250"><a href="#"><img src="images/menu_02_yogore.png" alt=""></a></p>
+			<p class="absolute" top="0" left="424" effect="moveTopIn" speed="1250"><a href="#"><img src="images/menu_03_ninjin.png" alt=""></a></p>
+			<!--
+			<ul class="absolute" top="0" left="0" effect="changeImage" speed="1000">
+				<li><img src="images/menu_01_takenoko.png" alt=""></li>
+				<li><img src="images/menu_02_yogore.png" alt=""></li>
+				<li><img src="images/menu_03_ninjin.png" alt=""></li>
+			</ul>
+			-->
+		</div>
+	
+	</div><!-- /.section -->
+	
+<pre class="prettyprint">
+&lt;!Doctype html&gt;
+&lt;html lang=&quot;ja&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-slideEffect.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(function(){
+	$('#demo').slideEffect();
+});
+&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery-slideEffect.css&quot; media=&quot;all&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class=&quot;section&quot;&gt;
+
+	&lt;div id=&quot;demo&quot; class=&quot;slideEffectWrapper&quot;&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;1250&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;164&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;3000&quot;&gt;&lt;img src=&quot;images/head_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;1250&quot;&gt;&lt;img src=&quot;images/main_02_yogore.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;263&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;3000&quot;&gt;&lt;img src=&quot;images/head_02_yogore.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;1250&quot;&gt;&lt;img src=&quot;images/main_03_ninjin.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;146&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;3000&quot;&gt;&lt;img src=&quot;images/head_03_ninjin.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot;&gt;&lt;img src=&quot;images/filter_black.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;moveTopIn&quot; speed=&quot;1250&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/menu_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;212&quot; effect=&quot;moveTopIn&quot; speed=&quot;1250&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/menu_02_yogore.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+		&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;424&quot; effect=&quot;moveTopIn&quot; speed=&quot;1250&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;img src=&quot;images/menu_03_ninjin.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;!-- /.section --&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<h2>実装方法</h2>
+	<p>基本的な実装方法です。</p>
+	<p>まず、jQueryとjQuery-slideEffect.jsを読み込みます。そして、基本的なマークアップを行います。</p>
+<pre class="prettyprint">
+&lt;html&gt;
+&lt;head&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-1.6.4.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;jquery-slideEffect.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+$(function(){
+	$('#demo').slideEffect();
+});
+&lt;/script&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;jquery-slideEffect.css&quot; media=&quot;all&quot; type=&quot;text/css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;demo&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;1250&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+	
+	<p>下記のようにブロック要素でマークアップした順にアニメーションが実行されます。</p>
+<pre class="prettyprint">
+&lt;div id=&quot;demo&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;1250&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;164&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;3000&quot;&gt;&lt;img src=&quot;images/head_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;1250&quot;&gt;&lt;img src=&quot;images/main_02_yogore.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+	
+	<h2 class="level2">ドキュメント</h2>
+	<p>マークアップするタグにカスタム属性を設定することで、エフェクトの調整などができます。</p>
+	
+	<h3 class="level3">基本マークアップ</h3>
+	<p class="mb10">下記が基本マークアップになります。class="absolute" とtop, left属性は必須になります。</p>
+	<dl class="defDlList">
+		<dt>基本属性</dt>
+		<dd>class="absolute" これがあることで、アニメーションするコンテンツの判別を行います。必須です。</dd>
+		<dd>top: 左端上を0基点とし、値が増えるとY軸が下に向かいます。cssのpositionのtopと同等です。</dd>
+		<dd>left: 左端上を0基点とし、値が増えるとX軸が右に向かいます。cssのpositionのleftと同等です。</dd>
+		<dd>effect: エフェクトの種類を指定します。</dd>
+		<dd>wait: ミリ秒指定で表示時間を調整できます。</dd>
+	</dl>
+<pre class="prettyprint">
+&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot; wait=&quot;2000&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</pre>
+
+	<hr class="dotLine">
+
+	<h3 class="level3">エフェクトリファレンス</h3>
+	
+	<dl class="defDlList" id="anc1">
+		<dt>fadeIn</dt>
+		<dd>オプションなし</dd>
+	</dl>
+	<div class="section">
+		<div id="fadeIn" class="slideEffectWrapper">
+			<p class="absolute" top="0" left="0" effect="fadeIn"><img src="images/main_01_takenoko.png" alt=""></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#fadeIn').slideEffect();
+	</script>
+<pre class="prettyprint">
+&lt;div id=&quot;fadeIn&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;fadeIn&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<dl class="defDlList" id="anc2">
+		<dt>moveRightIn</dt>
+		<dd>コンテンツが右からスライドします。</dd>
+		<dd>speed: ミリ秒指定でアニメーションスピードを調整できます。</dd>
+	</dl>
+	<div class="section">
+		<div id="moveRightIn" class="slideEffectWrapper">
+			<p class="absolute" top="0" left="0" effect="moveRightIn" speed="1500"><img src="images/main_01_takenoko.png" alt=""></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#moveRightIn').slideEffect();
+	</script>
+<pre class="prettyprint">
+&lt;div id=&quot;moveRightIn&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;moveRightIn&quot; speed=&quot;1500&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<dl class="defDlList" id="anc3">
+		<dt>moveLeftIn</dt>
+		<dd>コンテンツが左からスライドします。</dd>
+		<dd>speed: ミリ秒指定でアニメーションスピードを調整できます。</dd>
+	</dl>
+	<div class="section">
+		<div id="moveLeftIn" class="slideEffectWrapper">
+			<p class="absolute" top="0" left="0" effect="moveLeftIn" speed="1500"><img src="images/main_01_takenoko.png" alt=""></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#moveLeftIn').slideEffect();
+	</script>
+<pre class="prettyprint">
+&lt;div id=&quot;moveLeftIn&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;moveLeftIn&quot; speed=&quot;1500&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<dl class="defDlList" id="anc4">
+		<dt>moveTopIn</dt>
+		<dd>コンテンツが上からスライドします。</dd>
+		<dd>speed: ミリ秒指定でアニメーションスピードを調整できます。</dd>
+	</dl>
+	<div class="section">
+		<div id="moveTopIn" class="slideEffectWrapper">
+			<p class="absolute" top="0" left="0" effect="moveTopIn" speed="1500"><img src="images/main_01_takenoko.png" alt=""></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#moveTopIn').slideEffect();
+	</script>
+<pre class="prettyprint">
+&lt;div id=&quot;moveTopIn&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;moveTopIn&quot; speed=&quot;1500&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<dl class="defDlList" id="anc5">
+		<dt>moveBottomIn</dt>
+		<dd>コンテンツが下からスライドします。</dd>
+		<dd>speed: ミリ秒指定でアニメーションスピードを調整できます。</dd>
+	</dl>
+	<div class="section">
+		<div id="moveBottomIn" class="slideEffectWrapper">
+			<p class="absolute" top="0" left="0" effect="moveBottomIn" speed="1500"><img src="images/main_01_takenoko.png" alt=""></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#moveBottomIn').slideEffect();
+	</script>
+<pre class="prettyprint">
+&lt;div id=&quot;moveBottomIn&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;p class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;moveBottomIn&quot; speed=&quot;1500&quot;&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<dl class="defDlList" id="anc6">
+		<dt>changeImage</dt>
+		<dd>複数の要素がループで切り替わります。</dd>
+	</dl>
+	<div class="section">
+		<div id="changeImage" class="slideEffectWrapper">
+			<ul class="absolute" top="0" left="0" effect="changeImage">
+				<li><img src="images/main_01_takenoko.png" alt=""></li>
+				<li><img src="images/main_02_yogore.png" alt=""></li>
+				<li><img src="images/main_03_ninjin.png" alt=""></li>
+			</ul>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+	$('#changeImage').slideEffect();
+	</script>
+<pre class="prettyprint">
+&lt;div id=&quot;changeImage&quot; class=&quot;slideEffectWrapper&quot;&gt;
+	&lt;ul class=&quot;absolute&quot; top=&quot;0&quot; left=&quot;0&quot; effect=&quot;changeImage&quot;&gt;
+		&lt;li&gt;&lt;img src=&quot;images/main_01_takenoko.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src=&quot;images/main_02_yogore.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;img src=&quot;images/main_03_ninjin.png&quot; alt=&quot;&quot;&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+	
+	<hr class="dotLine">
+	
+	<div class="section">
+		<ul class="indentList">
+			<li class="fsXL"><a href="/responsive/slideEffect/reference.html">＞ Reference</a></li>
+			<li class="fsXL"><a href="/responsive/slideEffect/demo.html">＞ Demo Page</a></li>
+			<li class="fsXL"><a href="https://github.com/funnythingz/slideEffect/archive/master.zip" target="_blank">＞ Download</a></li>
+		</ul>
+	</div>
+
+</div><!-- /#globalContentsWrapper --></div><!-- /#globalContainer -->
+
+
+<div id="globalFooterContainer"><div id="footerInner">
+		<div class="section group">
+		<ul class="footerLink fFloL"><!--
+			--><li class="first-child"><a href="/responsive/">Home</a></li><!--
+			--><li><a href="http://twitter.com/funnythingz">twitter</a></li><!--
+			--><li><a href="http://hiropo.co.uk">wordpress</a></li><!--
+		--></ul>
+		<p class="copyright">Copyright &copy; <a href="http://www.funnythingz.com" target="_blank">funnythingz</a></p>
+	</div>
+</div><!-- /#footerInner --></div><!-- /#globalFooterContainer -->
+
+
+</body>
+</html>
